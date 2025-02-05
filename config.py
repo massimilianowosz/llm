@@ -3,7 +3,7 @@ import os
 # -------------------------------
 # Parametri del modello
 # -------------------------------
-d_model = 256  
+d_model = 768 
 # La dimensione degli embedding e delle rappresentazioni interne.
 # Ogni token verrà trasformato in un vettore di 256 dimensioni.
 
@@ -26,7 +26,7 @@ dropout = 0.1
 # -------------------------------
 # Parametri del training
 # -------------------------------
-learning_rate = 1e-4
+learning_rate = 2e-4
 # Il tasso di apprendimento usato dall'ottimizzatore per aggiornare i pesi.
 # Un valore di 0.001 significa che ogni aggiornamento dei pesi avrà questa dimensione.
 
@@ -43,8 +43,8 @@ batch_size = 2
 # Il numero di esempi processati contemporaneamente (batch) durante il training.
 # Batch piccoli possono ridurre il consumo di memoria ma aggiornano i pesi con gradienti più rumorosi.
 
-#pretrain_dataset="wikitext-103-raw-v1"
-pretrain_dataset="wikitext-2-raw-v1"
+pretrain_dataset="wikitext-103-raw-v1"
+#pretrain_dataset="wikitext-2-raw-v1"
 instruct_dataset="yahma/alpaca-cleaned"
 # -------------------------------
 # Percorsi dei file necessari
